@@ -12,6 +12,53 @@ $dark_charcoal: hsl(24, 5%, 18%);
   font-weight: 400;
 }
 
+@mixin thin-bullet-points($color) {
+  ul.thin-bullet-points {
+    list-style-type: none;
+  }
+
+  ul.thin-bullet-points > li {
+    margin-left: 1ch;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  ul.thin-bullet-points > li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -0.25rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+    background-color: $color;
+  }
+}
+
+@mixin numeric-list($color) {
+  ol.numbered-list {
+    list-style-type: none;
+    counter-reset: li;
+  }
+
+  ol.numbered-list > li {
+    margin-left: 1ch;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  ol.numbered-list > li::before {
+    content: counter(li) ".";
+    counter-increment: li;
+    position: absolute;
+    top: 0;
+    left: -0.25rem;
+    color: $color;
+    font-weight: 600;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -33,7 +80,7 @@ body {
 }
 
 b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h1 {
@@ -67,6 +114,8 @@ img.main-recipe-photo {
 }
 
 .highlight-container {
+  @include thin-bullet-points($dark_raspberry);
+
   background-color: $rose_white;
   padding: 1.5rem;
   border-radius: 10px;
@@ -75,26 +124,7 @@ img.main-recipe-photo {
     font-weight: 600;
     color: $dark_raspberry;
   }
-
-  ul {
-    list-style-type: none;
-  }
-
-  li {
-    margin-left: 2ch;
-    padding-left: 1rem;
-    position: relative;
-  }
-
-  li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -0.35rem;
-    width: 0.35rem;
-    height: 0.35rem;
-    border-radius: 50%;
-    background-color: $dark_raspberry;
-  }
 }
+
+@include thin-bullet-points($nutmeg);
+@include numeric-list($nutmeg);
