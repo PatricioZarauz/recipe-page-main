@@ -43,8 +43,8 @@ $dark_charcoal: hsl(24, 5%, 18%);
   }
 
   ol.numbered-list > li {
-    margin-left: 1ch;
-    padding-left: 1.5rem;
+    margin-left: 1.5ch;
+    padding-left: 1.45rem;
     position: relative;
   }
 
@@ -53,7 +53,7 @@ $dark_charcoal: hsl(24, 5%, 18%);
     counter-increment: li;
     position: absolute;
     top: 0;
-    left: -0.25rem;
+    left: -1ch;
     color: $color;
     font-weight: 600;
   }

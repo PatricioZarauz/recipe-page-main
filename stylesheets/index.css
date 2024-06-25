@@ -93,8 +93,8 @@ ol.numbered-list {
   counter-reset: li; }
 
 ol.numbered-list > li {
-  margin-left: 1ch;
-  padding-left: 1.5rem;
+  margin-left: 1.5ch;
+  padding-left: 1.45rem;
   position: relative; }
 
 ol.numbered-list > li::before {
@@ -102,7 +102,7 @@ ol.numbered-list > li::before {
   counter-increment: li;
   position: absolute;
   top: 0;
-  left: -0.25rem;
+  left: -1ch;
   color: #854632;
   font-weight: 600; }
 
