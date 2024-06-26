@@ -106,4 +106,22 @@ ol.numbered-list > li::before {
   color: #854632;
   font-weight: 600; }
 
+table.vertical-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  table-layout: fixed; }
+  table.vertical-table td:nth-of-type(odd) {
+    font-weight: 400; }
+  table.vertical-table td:nth-of-type(even) {
+    font-weight: 600;
+    color: #854632; }
+  table.vertical-table td {
+    padding-block: 1rem;
+    padding-inline: 3ch; }
+  table.vertical-table tr:not(:nth-last-of-type(1)) {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #e4ded8; }
+
 /*# sourceMappingURL=index.css.map */

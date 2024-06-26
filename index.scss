@@ -128,3 +128,30 @@ img.main-recipe-photo {
 
 @include thin-bullet-points($nutmeg);
 @include numeric-list($nutmeg);
+
+table.vertical-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+
+  td:nth-of-type(odd) {
+    font-weight: 400;
+  }
+
+  td:nth-of-type(even) {
+    font-weight: 600;
+    color: $nutmeg;
+  }
+
+  td {
+    padding-block: 1rem;
+    padding-inline: 3ch;
+  }
+
+  tr:not(:nth-last-of-type(1)) {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $light_grey;
+  }
+}
