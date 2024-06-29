@@ -131,13 +131,18 @@ section:not(:nth-last-of-type(1)) {
   border-bottom-width: 1px;
 }
 
+picture {
+  @media (min-width: 45rem) {
+    padding-inline: 2.5rem;
+    padding-top: 2.5rem;
+  }
+}
+
 img.main-recipe-photo {
   width: 100%;
   aspect-ratio: 2/1;
   @media (min-width: 45rem) {
-    border-radius: 20px;
-    // padding-inline: 2.5rem;
-    // padding-top: 2.5rem;
+    border-radius: 15px;
   }
 }
 

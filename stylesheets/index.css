@@ -57,12 +57,17 @@ section:not(:nth-last-of-type(1)) {
   border-width: 0;
   border-bottom-width: 1px; }
 
+@media (min-width: 45rem) {
+  picture {
+    padding-inline: 2.5rem;
+    padding-top: 2.5rem; } }
+
 img.main-recipe-photo {
   width: 100%;
   aspect-ratio: 2/1; }
   @media (min-width: 45rem) {
     img.main-recipe-photo {
-      border-radius: 20px; } }
+      border-radius: 15px; } }
 
 .highlight-container {
   background-color: #fff5fa;
