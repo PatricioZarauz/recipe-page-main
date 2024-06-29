@@ -15,6 +15,8 @@ $dark_charcoal: hsl(24, 5%, 18%);
 @mixin thin-bullet-points($color) {
   ul.thin-bullet-points {
     list-style-type: none;
+    display: grid;
+    gap: 0.75rem;
   }
 
   ul.thin-bullet-points > li {
@@ -38,6 +40,8 @@ $dark_charcoal: hsl(24, 5%, 18%);
 
 @mixin numeric-list($color) {
   ol.numbered-list {
+    display: grid;
+    gap: 0.75rem;
     list-style-type: none;
     counter-reset: li;
   }
@@ -76,6 +80,7 @@ body {
   margin: 0;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
+  background-color: $eggshell;
   color: $wenge_brown;
 }
 
@@ -86,13 +91,31 @@ b {
 h1 {
   @include base-headers;
   font-size: 2.25rem;
+  line-height: 2.3rem;
   color: $dark_charcoal;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   @include base-headers;
   font-size: 1.5rem;
   color: $nutmeg;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+main {
+  background-color: $white;
+  max-width: 45rem;
+  margin-inline: auto;
+
+  @media (min-width: 45rem) {
+    border-radius: 30px;
+    margin-block: 4rem;
+  }
 }
 
 section {
@@ -111,6 +134,11 @@ section:not(:nth-last-of-type(1)) {
 img.main-recipe-photo {
   width: 100%;
   aspect-ratio: 2/1;
+  @media (min-width: 45rem) {
+    border-radius: 20px;
+    // padding-inline: 2.5rem;
+    // padding-top: 2.5rem;
+  }
 }
 
 .highlight-container {
@@ -119,10 +147,12 @@ img.main-recipe-photo {
   background-color: $rose_white;
   padding: 1.5rem;
   border-radius: 10px;
+  margin-block: 2rem;
 
   h3 {
     font-weight: 600;
     color: $dark_raspberry;
+    margin-bottom: 1rem;
   }
 }
 
